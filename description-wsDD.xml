@@ -1,0 +1,197 @@
+<program_description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xsi:noNamespaceSchemaLocation="https://www.decision-deck.org/ws/_downloads/description.xsd">
+    <program provider="AGH" name="HRE" displayName="HeuristicRatingEstimation" version="1.0"/>
+    <documentation>
+        <description>
+            Computes HRE(Heuristic rating estimation) method - approach proposes a new way of using pairwise comparisons
+            matrix.
+        </description>
+        <contact>Dominik Juraszek (djurasze@gmail.com)</contact>
+    </documentation>
+    <parameters>
+        <input id="alternatives" name="alternatives" displayName="alternatives" isoptional="0">
+            <documentation>
+                <description>
+                    Alternatives that will be ranked. Alternatives must be active. By default (no active tag), alternatives are considered as active.
+                </description>
+            </documentation>
+            <xmcda tag="alternatives">
+                <![CDATA[
+<alternatives> <alternative id="..."></alternative> [...] </alternatives>
+]]>
+            </xmcda>
+        </input>
+        <input id="alternativesValues" name="alternativesValues" displayName="alternativesValues" isoptional="1">
+            <documentation>
+                <description>
+                    Initially known rankings for alternatives.
+                </description>
+            </documentation>
+            <xmcda tag="alternativesValues">
+                <![CDATA[
+<alternativesValues> <alternativeValue> <alternativeID> [...] </alternativeID> <values> <value> <real> [...] </real> </value>  </values> </alternativeValue> [...] </alternativesValues>
+]]>
+            </xmcda>
+        </input>
+        <input id="alternativesMatrix" name="alternativesMatrix" displayName="alternativesMatrix" isoptional="0">
+            <documentation>
+                <description>
+                    Partial assessments pairs over the set of alternatives.
+                </description>
+            </documentation>
+            <xmcda tag="alternativesValues">
+                <![CDATA[
+<alternativesMatrix> <row> <alternativeID> [...] </alternativeID> <column> <alternativeID> [...] </alternativeID> <values> <value> <real> [...] </real> </value> </values> </column> [...] </row> [...] </alternativesMatrix>
+]]>
+            </xmcda>
+        </input>
+
+        <input id="parameters" name="parameters" displayName="parameters" isoptional="0">
+            <documentation>
+                <description>
+                    A set of method parameters to tune the algorithm:
+                </description>
+            </documentation>
+            <xmcda tag="methodParameters">
+                <![CDATA[
+
+    <programParameters>
+        <parameter name="TryToReciprocalMatrix">
+            <values>
+                <value>
+                    <boolean>%1</boolean>
+                </value>
+            </values>
+        </parameter>
+
+        <parameter name="NormalizeResults">
+            <values>
+                <value>
+                    <boolean>%2</boolean>
+                </value>
+            </values>
+        </parameter>
+
+        <parameter name="CalculationMethod">
+            <values>
+                <value>
+                    <label>%3</label>
+                </value>
+            </values>
+        </parameter>
+
+        <parameter name="WithSmallestError">
+            <values>
+                <value>
+                    <boolean>%4</boolean>
+                </value>
+            </values>
+        </parameter>
+
+         <parameter name="MaxIterations">
+            <values>
+                <value>
+                    <integer>%5</integer>
+                </value>
+            </values>
+        </parameter>
+    </programParameters>
+
+				]]>
+            </xmcda>
+            <gui status="preferGUI">
+                <entry id="%1" type="boolean" displayName="TryToReciprocalMatrix">
+                    <documentation>
+                        <description>
+                            Turns on Heuristics of reciprocity restoration. This is a boolean. The default value is false.
+                        </description>
+                    </documentation>
+                    <defaultValue>false</defaultValue>
+                </entry>
+
+                <entry id="%2" type="boolean" displayName="NormalizeResults">
+                    <documentation>
+                        <description>
+                            Turns on results normalization. This is a boolean. The default value is true.
+                        </description>
+                    </documentation>
+                    <defaultValue>true</defaultValue>
+                </entry>
+
+                <entry id="%3" type="enum" displayName="CalculationMethod">
+                    <documentation>
+                        <description>
+                            This parameter specifies the type of calculation method.
+                        </description>
+                    </documentation>
+                    <items>
+                        <item id="item0">
+                            <description>Arithmetic</description>
+                            <value>Arithmetic</value>
+                        </item>
+                        <item id="item1">
+                            <description>Geometric</description>
+                            <value>Geometric</value>
+                        </item>
+                        <item id="item2">
+                            <description>Minimizing estimation error with arithmetic approach</description>
+                            <value>MinimizingEstimationError</value>
+                        </item>
+                    </items>
+                    <defaultValue>Arithmetic</defaultValue>
+                </entry>
+
+                <entry id="%4" type="boolean" displayName="WithSmallestError">
+                    <documentation>
+                        <description>
+                            Tries to find solution with smallest error. This method should be used with 'Arithmetic' calculation method and with specified MaxIterations. In practice, it
+                            should be small enough (even two or three iterations may be useful). This is a boolean. The default value is false.
+                        </description>
+                    </documentation>
+                    <defaultValue>false</defaultValue>
+                </entry>
+
+                <entry id="%5" type="int" displayName="MaxIterations">
+                    <documentation>
+                        <description>
+                            Defines number of maximum iterations for algorithm. This is a integer. The default value is 100.
+                        </description>
+                    </documentation>
+                    <defaultValue>100</defaultValue>
+                </entry>
+
+            </gui>
+        </input>
+
+        <output id="alternativesValues" name="alternativesValues" displayName="alternativesValues">
+            <documentation>
+                <description>
+                    Calculated rankings for all alternatives.
+                </description>
+            </documentation>
+            <xmcda tag="alternativesValues">
+                <![CDATA[
+<alternativesValues> <alternativeValue> <alternativeID> [...] </alternativeID> <values> <value> <real> [...] </real> </value>  </values> </alternativeValue> [...] </alternativesValues>
+]]>
+            </xmcda>
+        </output>
+
+
+        <output id="logMessage" name="messages" displayName="messages">
+            <documentation>
+                <description>Log message about program status. This can be 'ok' when algorithm finish successfully or 'error' when something goes wrong.</description>
+            </documentation>
+            <xmcda tag="programExecutionResult">
+                <![CDATA[
+<programExecutionResult>
+		<status> [...] </status>
+		<messages>
+			<message level="...">
+				<text> [...] </text>
+			</message>
+		</messages>
+	</programExecutionResult>]]>
+            </xmcda>
+        </output>
+    </parameters>
+</program_description>

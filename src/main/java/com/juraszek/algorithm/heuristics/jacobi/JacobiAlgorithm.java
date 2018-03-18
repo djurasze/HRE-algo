@@ -72,7 +72,7 @@ public class JacobiAlgorithm {
                 }
             }
 
-            if (stop || iterations == (int) xmcdaProperties.getParameter(Parameters.MaxIterations))
+            if (stop || iterations >= (int) xmcdaProperties.getParameter(Parameters.MaxIterations))
                 break;
             previousIterationResult = currentIterationResult.clone();
             if (!missingPairList.isEmpty()) {

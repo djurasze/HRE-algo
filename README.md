@@ -10,7 +10,8 @@ HRE-algorithm module for Decision-Deck platform
 ## Build
 
 ```
-mvn clean package
+mvn clean 
+mvn package
 ```
 
 generated jar with all necessary dependencies:
@@ -30,4 +31,6 @@ example:
 ```
 java -jar ./target/hre-algorithm-1.0-jar-with-dependencies.jar -i ./test/input -o ./test/output 
 ```
+
+More info about XMCDA format on [Decision Deck](https://www.decision-deck.org/project/)
 

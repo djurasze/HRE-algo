@@ -3,7 +3,7 @@
 
     <alternativesValues>
 
-        <alternativeValue id="cv6">
+        <alternativeValue>
             <alternativeID>a6</alternativeID>
             <values>
                 <value>
@@ -11,7 +11,7 @@
                 </value>
             </values>
         </alternativeValue>
-        <alternativeValue id="cv7">
+        <alternativeValue>
             <alternativeID>a7</alternativeID>
             <values>
                 <value>
@@ -19,7 +19,7 @@
                 </value>
             </values>
         </alternativeValue>
-        <alternativeValue id="cv8">
+        <alternativeValue>
             <alternativeID>a8</alternativeID>
             <values>
                 <value>
