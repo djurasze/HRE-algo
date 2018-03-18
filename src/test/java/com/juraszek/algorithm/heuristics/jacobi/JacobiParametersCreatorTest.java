@@ -12,9 +12,6 @@ import org.mockito.runners.MockitoJUnitRunner;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
 
-/**
- * Created by Dominik on 2017-05-21.
- */
 @RunWith(MockitoJUnitRunner.class)
 public class JacobiParametersCreatorTest {
 

@@ -38,7 +38,8 @@ public class ApplicationFailTest {
                 {"example3-fail-input", "example3-fail-output", "Invalid inputs format."}, // pairs with more than one value
                 {"example4-fail-input", "example4-fail-output",
                         "The calculation could not be performed, reason: Can not propose values for pairs comparisons"}, // concepts without reachability
-                {"example5-fail-input", "example5-fail-output", "Invalid inputs format."} // wrong parameter passed
+                {"example5-fail-input", "example5-fail-output", "Invalid inputs format."}, // wrong parameter passed
+                {"example6-fail-input", "example6-fail-output", "The calculation could not be performed, reason: Invalid calculation method: Arithmeticf"} // invalid calculation method
         });
     }
 

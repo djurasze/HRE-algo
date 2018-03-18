@@ -11,9 +11,7 @@ import org.xmcda.XMCDA;
 import java.io.File;
 import java.util.Map;
 
-/**
- * Created by Dominik on 2017-09-03.
- */
+
 @Service(value = "HreIOService")
 public class IOService {
 

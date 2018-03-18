@@ -14,9 +14,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-/**
- * Created by Dominik on 2017-05-21.
- */
 @Service
 public class HREAlgorithm {
 

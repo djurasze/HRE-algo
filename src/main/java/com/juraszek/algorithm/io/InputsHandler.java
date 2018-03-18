@@ -101,7 +101,6 @@ public class InputsHandler {
         } else if (xmcda.alternativesMatricesList.size() > 1) {
             errors.addError("More than one alternative values matrix has been supplied");
         } else {
-
             xmcda.alternatives.getActiveAlternatives()
                     .forEach(alternative1 -> xmcda.alternatives.getActiveAlternatives()
                             .forEach(alternative2 -> {
@@ -118,9 +117,7 @@ public class InputsHandler {
                                     final String msg = "Error when converting the alternative matrix pairs to Double, reason:";
                                     errors.addError(XMCDAMessageParser.getMessage(msg, e));
                                 }
-
                             }));
-
         }
     }
 

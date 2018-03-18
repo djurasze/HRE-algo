@@ -33,7 +33,7 @@ public class HRERunner {
         final ProgramExecutionResult executionResult = new ProgramExecutionResult();
 
         HREModel inputs = ioService.readInputs(params, executionResult, prgExecResults);
-        xmcdaProperties.initHeuristicMethod();
+        xmcdaProperties.initHeuristicMethod(executionResult, prgExecResults);
         try {
             inputs = hreAlgorithm.singleCalculate(inputs);
         } catch (Throwable t) {

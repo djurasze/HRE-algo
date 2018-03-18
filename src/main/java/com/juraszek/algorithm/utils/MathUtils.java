@@ -3,9 +3,6 @@ package com.juraszek.algorithm.utils;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-/**
- * Created by Dominik on 2017-05-21.
- */
 public class MathUtils {
 
     public static Double round(Double value, int places) {

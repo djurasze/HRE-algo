@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 public class CmdLineParser {
 
     public CmdLineParser.Arguments parseCmdLineArguments(String[] args) throws InvalidCommandLineException {
-        // Let's make it dead simple
         if (args.length != 4)
             throw new InvalidCommandLineException("Invalid number of arguments");
         Arguments arguments = new Arguments();
@@ -20,12 +19,10 @@ public class CmdLineParser {
         if (arguments.inputDirectory == null || arguments.outputDirectory == null)
             throw new InvalidCommandLineException("Missing parameters");
         return arguments;
-
     }
 
     static class InvalidCommandLineException extends Exception {
         private static final long serialVersionUID = 3991185595688176975L;
-
         InvalidCommandLineException(String message) {
             super(message);
         }

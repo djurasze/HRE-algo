@@ -2,9 +2,6 @@ package com.juraszek.algorithm.heuristics;
 
 import org.springframework.stereotype.Service;
 
-/**
- * Created by Dominik on 2017-05-21.
- */
 @Service
 public class ReciprocalMatrixConverter {
 

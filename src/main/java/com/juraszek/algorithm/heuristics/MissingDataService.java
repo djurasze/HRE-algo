@@ -8,9 +8,6 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Stream;
 
-/**
- * Created by Dominik on 2017-05-21.
- */
 @Service
 public class MissingDataService {
 

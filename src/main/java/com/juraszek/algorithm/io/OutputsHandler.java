@@ -11,21 +11,19 @@ import java.util.Map;
 @Service
 public class OutputsHandler {
     public Map<String, XMCDA> convert(HREModel model) {
-        final HashMap<String, XMCDA> x_results = new HashMap<>();
+        final HashMap<String, XMCDA> results = new HashMap<>();
 
-        XMCDA x_weighted_sum = new XMCDA();
-        AlternativesValues<Double> x_alternatives_values = new AlternativesValues<>();
+        XMCDA weightedSum = new XMCDA();
+        AlternativesValues<Double> alternativesValues = new AlternativesValues<>();
 
         for (int i = 0; i < model.getAlternatives().size(); i++) {
-            x_alternatives_values.put(model.getAlternatives().get(i), model.getAlternativesWeights()[i]);
+            alternativesValues.put(model.getAlternatives().get(i), model.getAlternativesWeights()[i]);
         }
 
-        x_weighted_sum.alternativesValuesList.add(x_alternatives_values);
+        weightedSum.alternativesValuesList.add(alternativesValues);
+        results.put("alternativesValues", weightedSum);
 
-        x_results.put("alternativesValues", x_weighted_sum);
-
-        return x_results;
-
+        return results;
     }
 
 

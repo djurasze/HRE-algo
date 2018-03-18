@@ -4,11 +4,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 
-/**
- * Created by Dominik on 2017-09-03.
- */
-@Service
 
+@Service
 public class HREResultConverter {
     public Double[] convertToResult(Double[] c, Double[] jacobiResult) {
         int jacobiResultIndex = 0;

@@ -51,7 +51,7 @@ public class ApplicationSuccessTest {
         String TMP_OUTPUT_PATH = folder.newFolder(output).getAbsolutePath();
         String INPUT_PATH = "src/test/resources/data/successExamples/" + input;
         String EXPECTED_OUTPUT_PATH = "src/test/resources/data/successExamples/" + output;
-        File EXPECTED_CRITERIA_VALUES = new File(EXPECTED_OUTPUT_PATH + "/alternativesValues.xml");
+        File EXPECTED_ALTERNATIVES_VALUES = new File(EXPECTED_OUTPUT_PATH + "/alternativesValues.xml");
         File EXPECTED_MESSAGES = new File(EXPECTED_OUTPUT_PATH + "/messages.xml");
 
         final String[] GIVEN_PARAMS = {"--input-directory", INPUT_PATH,
@@ -65,7 +65,7 @@ public class ApplicationSuccessTest {
         File criteriaValues = new File(TMP_OUTPUT_PATH + "/alternativesValues.xml");
         File messages = new File(TMP_OUTPUT_PATH + "/messages.xml");
 
-        assertThat(FileUtils.contentEquals(criteriaValues, EXPECTED_CRITERIA_VALUES)).isTrue();
+        assertThat(FileUtils.contentEquals(criteriaValues, EXPECTED_ALTERNATIVES_VALUES)).isTrue();
         assertThat(FileUtils.contentEquals(messages, EXPECTED_MESSAGES)).isTrue();
 
     }

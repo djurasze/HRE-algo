@@ -24,7 +24,7 @@
         <parameter name="CalculationMethod">
             <values>
                 <value>
-                    <label>Arithmetic</label>
+                    <label>Arithmeticf</label>
                 </value>
             </values>
         </parameter>

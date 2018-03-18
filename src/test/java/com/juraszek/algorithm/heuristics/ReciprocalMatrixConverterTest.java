@@ -4,9 +4,6 @@ import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- * Created by Dominik on 2017-05-21.
- */
 public class ReciprocalMatrixConverterTest {
 
     @Test

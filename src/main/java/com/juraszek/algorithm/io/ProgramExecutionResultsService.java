@@ -19,7 +19,6 @@ public class ProgramExecutionResultsService {
         parser.writeXMCDA(prgExecResults, prgExecResultsFile, "programExecutionResult");
     }
 
-
     public void writeProgramExecutionResultsAndExit(File prgExecResultsFile, ProgramExecutionResult errors, String message) throws Exception {
         try {
             writeProgramExecutionResults(prgExecResultsFile, errors);
