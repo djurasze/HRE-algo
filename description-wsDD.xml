@@ -4,7 +4,7 @@
     <documentation>
         <description>
             Computes HRE(Heuristic rating estimation) method - approach proposes a new way of using pairwise comparisons
-            matrix.
+            matrix. Source code: https://github.com/djurasze/HRE-algo
         </description>
         <contact>Dominik Juraszek (djurasze@gmail.com)</contact>
     </documentation>
