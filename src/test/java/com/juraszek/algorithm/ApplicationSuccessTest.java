@@ -65,8 +65,8 @@ public class ApplicationSuccessTest {
         File criteriaValues = new File(TMP_OUTPUT_PATH + "/alternativesValues.xml");
         File messages = new File(TMP_OUTPUT_PATH + "/messages.xml");
 
-        assertThat(FileUtils.contentEquals(criteriaValues, EXPECTED_ALTERNATIVES_VALUES)).isTrue();
-        assertThat(FileUtils.contentEquals(messages, EXPECTED_MESSAGES)).isTrue();
+        assertThat(FileUtils.contentEqualsIgnoreEOL(criteriaValues, EXPECTED_ALTERNATIVES_VALUES, "utf-8")).isTrue();
+        assertThat(FileUtils.contentEqualsIgnoreEOL(messages, EXPECTED_MESSAGES, "utf-8")).isTrue();
 
     }
 

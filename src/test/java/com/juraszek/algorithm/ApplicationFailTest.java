@@ -64,7 +64,7 @@ public class ApplicationFailTest {
         //then
         File messages = new File(TMP_OUTPUT_PATH + "/messages.xml");
 
-        assertThat(FileUtils.contentEquals(messages, EXPECTED_MESSAGES)).isTrue();
+        assertThat(FileUtils.contentEqualsIgnoreEOL(messages, EXPECTED_MESSAGES, "utf-8")).isTrue();
     }
 
 }
