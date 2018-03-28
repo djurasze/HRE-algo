@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xmcda:XMCDA xmlns:xmcda="http://www.decision-deck.org/2012/XMCDA-2.2.1"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.decision-deck.org/2012/XMCDA-2.2.1 http://www.decision-deck.org/xmcda/_downloads/XMCDA-2.2.1.xsd">
+
+    <alternativesMatrix>
+        <row>
+            <alternativeID>a1</alternativeID>
+            <column>
+                <alternativeID>a1</alternativeID>
+                
+                    <value>
+                        <real>1.00</real>
+                    </value>
+                
+            </column>
+            <column>
+                <alternativeID>a2</alternativeID>
+                
+                    <value>
+                        <real>0.6</real>
+                    </value>
+                
+            </column>
+            <column>
+                <alternativeID>a3</alternativeID>
+                
+                    <value>
+                        <real>0.57</real>
+                    </value>
+                
+            </column>
+            <column>
+                <alternativeID>a4</alternativeID>
+                
+                    <value>
+                        <real>0.625</real>
+                    </value>
+                
+            </column>
+            <column>
+                <alternativeID>a5</alternativeID>
+                
+                    <value>
+                        <real>0.5</real>
+                    </value>
+                
+            </column>
+        </row>
+
+        <row>
+            <alternativeID>a2</alternativeID>
+            <column>
+                <alternativeID>a1</alternativeID>
+                
+                    <value>
+                        <real>1.666</real>
+                    </value>
+                
+            </column>
+            <column>
+                <alternativeID>a2</alternativeID>
+                
+                    <value>
+                        <real>1</real>
+                    </value>
+                
+            </column>
+            <column>
+                <alternativeID>a3</alternativeID>
+                
+                    <value>
+                        <real>0.714</real>
+                    </value>
+                
+            </column>
+            <column>
+                <alternativeID>a4</alternativeID>
+                
+                    <value>
+                        <real>2.5</real>
+                    </value>
+                
+            </column>
+            <column>
+                <alternativeID>a5</alternativeID>
+                
+                    <value>
+                        <real>3.333</real>
+                    </value>
+                
+            </column>
+        </row>
+
+
+        <row>
+            <alternativeID>a3</alternativeID>
+            <column>
+                <alternativeID>a1</alternativeID>
+                
+                    <value>
+                        <real>0.571</real>
+                    </value>
+                
+            </column>
+            <column>
+                <alternativeID>a2</alternativeID>
+                
+                    <value>
+                        <real>1.4</real>
+                    </value>
+                
+            </column>
+            <column>
+                <alternativeID>a3</alternativeID>
+                
+                    <value>
+                        <real>1</real>
+                    </value>
+                
+            </column>
+            <column>
+                <alternativeID>a4</alternativeID>
+                
+                    <value>
+                        <real>3.5</real>
+                    </value>
+                
+            </column>
+            <column>
+                <alternativeID>a5</alternativeID>
+                
+                    <value>
+                        <real>4</real>
+                    </value>
+                
+            </column>
+        </row>
+
+
+        <row>
+            <alternativeID>a4</alternativeID>
+            <column>
+                <alternativeID>a1</alternativeID>
+                
+                    <value>
+                        <real>1.6</real>
+                    </value>
+                
+            </column>
+            <column>
+                <alternativeID>a2</alternativeID>
+                
+                    <value>
+                        <real>0.4</real>
+                    </value>
+                
+            </column>
+            <column>
+                <alternativeID>a3</alternativeID>
+                
+                    <value>
+                        <real>0.285</real>
+                    </value>
+                
+            </column>
+            <column>
+                <alternativeID>a4</alternativeID>
+                
+                    <value>
+                        <real>1</real>
+                    </value>
+                
+            </column>
+            <column>
+                <alternativeID>a5</alternativeID>
+                
+                    <value>
+                        <real>1.333</real>
+                    </value>
+                
+            </column>
+        </row>
+
+
+        <row>
+            <alternativeID>a5</alternativeID>
+            <column>
+                <alternativeID>a1</alternativeID>
+                
+                    <value>
+                        <real>2</real>
+                    </value>
+                
+            </column>
+            <column>
+                <alternativeID>a2</alternativeID>
+                
+                    <value>
+                        <real>0.3</real>
+                    </value>
+                
+            </column>
+            <column>
+                <alternativeID>a3</alternativeID>
+                
+                    <value>
+                        <real>0.25</real>
+                    </value>
+                
+            </column>
+            <column>
+                <alternativeID>a4</alternativeID>
+                
+                    <value>
+                        <real>0.75</real>
+                    </value>
+                
+            </column>
+            <column>
+                <alternativeID>a5</alternativeID>
+                
+                    <value>
+                        <real>1</real>
+                    </value>
+                
+            </column>
+        </row>
+
+    </alternativesMatrix>
+
+
+</xmcda:XMCDA>
