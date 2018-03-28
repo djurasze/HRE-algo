@@ -9,6 +9,7 @@ HRE-algorithm module for Decision-Deck platform
 
 ## Build
 
+It is important to run for the first time separately ```mvn clean``` and ```mvn package``` because when ```mvn clean``` is executed maven will add to local repository lib with XMCDA library. 
 ```
 mvn clean 
 mvn package
