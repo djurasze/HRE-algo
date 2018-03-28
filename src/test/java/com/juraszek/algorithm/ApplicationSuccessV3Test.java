@@ -15,7 +15,9 @@ import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
 
 @RunWith(Parameterized.class)
-public class ApplicationSuccessTest {
+public class ApplicationSuccessV3Test {
+
+    private final static String VERSION = "--v3";
 
     @Rule
     public TemporaryFolder folder= new TemporaryFolder();
@@ -40,7 +42,7 @@ public class ApplicationSuccessTest {
     private String input;
     private String output;
 
-    public ApplicationSuccessTest(String input, String output) {
+    public ApplicationSuccessV3Test(String input, String output) {
         this.input = input;
         this.output = output;
     }
@@ -49,13 +51,13 @@ public class ApplicationSuccessTest {
     public void examples() throws Throwable {
         //given
         String TMP_OUTPUT_PATH = folder.newFolder(output).getAbsolutePath();
-        String INPUT_PATH = "src/test/resources/data/successExamples/" + input;
-        String EXPECTED_OUTPUT_PATH = "src/test/resources/data/successExamples/" + output;
+        String INPUT_PATH = "src/test/resources/data/successExamplesV3/" + input;
+        String EXPECTED_OUTPUT_PATH = "src/test/resources/data/successExamplesV3/" + output;
         File EXPECTED_ALTERNATIVES_VALUES = new File(EXPECTED_OUTPUT_PATH + "/alternativesValues.xml");
         File EXPECTED_MESSAGES = new File(EXPECTED_OUTPUT_PATH + "/messages.xml");
 
         final String[] GIVEN_PARAMS = {"--input-directory", INPUT_PATH,
-                "--output-directory",TMP_OUTPUT_PATH};
+                "--output-directory",TMP_OUTPUT_PATH, VERSION};
 
 
         //when

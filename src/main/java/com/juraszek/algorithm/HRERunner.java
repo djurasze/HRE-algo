@@ -31,15 +31,16 @@ public class HRERunner {
         final CmdLineParser.Arguments params = cmdLineParser.parseCmdLineArguments(args);
         final File prgExecResults = new File(params.outputDirectory, "messages.xml");
         final ProgramExecutionResult executionResult = new ProgramExecutionResult();
+        xmcdaProperties.initXMCDAVersion(executionResult, prgExecResults, params.xmcdaVersion);
 
         HREModel inputs = ioService.readInputs(params, executionResult, prgExecResults);
-        xmcdaProperties.initHeuristicMethod(executionResult, prgExecResults);
+        xmcdaProperties.initHeuristicMethod(executionResult, prgExecResults, params.xmcdaVersion);
         try {
             inputs = hreAlgorithm.singleCalculate(inputs);
         } catch (Throwable t) {
             String message = XMCDAMessageParser.getMessage("The calculation could not be performed, reason: ", t);
             executionResult.addError(message);
-            programExecutionResultsService.writeProgramExecutionResultsAndExit(prgExecResults, executionResult, message);
+            programExecutionResultsService.writeProgramExecutionResultsAndExit(prgExecResults, executionResult, message, params.xmcdaVersion);
         }
 
 

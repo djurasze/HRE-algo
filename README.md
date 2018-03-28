@@ -23,14 +23,25 @@ generated jar with all necessary dependencies:
 
 ## Running app
 
+For xmcda files with version 3.0.0:
 ```
-java -jar ./target/hre-algorithm-1.0-jar-with-dependencies.jar -i <inputDir> -o <outputDir> 
+java -jar ./target/hre-algorithm-1.0-jar-with-dependencies.jar -i <inputDir> -o <outputDir> --v3
 ```
 
-example:
+For xmcda files with version 2.2.2:
 
 ```
-java -jar ./target/hre-algorithm-1.0-jar-with-dependencies.jar -i ./test/input -o ./test/output 
+java -jar ./target/hre-algorithm-1.0-jar-with-dependencies.jar -i <inputDir> -o <outputDir> --v2
+```
+
+examples:
+
+```
+java -jar ./target/hre-algorithm-1.0-jar-with-dependencies.jar -i ./test/inputV3 -o ./test/outputV3 --v3
+```
+
+```
+java -jar ./target/hre-algorithm-1.0-jar-with-dependencies.jar -i ./test/inputV2 -o ./test/outputV2 --v2
 ```
 
 More info about XMCDA format on [Decision Deck](https://www.decision-deck.org/project/)

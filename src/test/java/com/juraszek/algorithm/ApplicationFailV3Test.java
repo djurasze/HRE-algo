@@ -1,5 +1,6 @@
 package com.juraszek.algorithm;
 
+import com.juraszek.algorithm.utils.xmcda.Version;
 import org.apache.commons.io.FileUtils;
 import org.junit.Rule;
 import org.junit.Test;
@@ -16,7 +17,9 @@ import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 import static org.assertj.core.api.Java6Assertions.fail;
 
 @RunWith(Parameterized.class)
-public class ApplicationFailTest {
+public class ApplicationFailV3Test {
+
+    private final static String VERSION = "--v3";
 
     @Rule
     public TemporaryFolder folder = new TemporaryFolder();
@@ -24,7 +27,7 @@ public class ApplicationFailTest {
     private String output;
     private String errorMessage;
 
-    public ApplicationFailTest(String input, String output, String errorMessage) {
+    public ApplicationFailV3Test(String input, String output, String errorMessage) {
         this.input = input;
         this.output = output;
         this.errorMessage = errorMessage;
@@ -33,7 +36,7 @@ public class ApplicationFailTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {"example1-fail-input", "example1-fail-output", "Missing input files."}, // without criteriaMatrix.xml
+                {"example1-fail-input", "example1-fail-output", "Invalid inputs."}, // without criteriaMatrix.xml
                 {"example2-fail-input", "example2-fail-output", "Invalid inputs format."}, // no double type for pairs
                 {"example3-fail-input", "example3-fail-output", "Invalid inputs format."}, // pairs with more than one value
                 {"example4-fail-input", "example4-fail-output",
@@ -47,12 +50,12 @@ public class ApplicationFailTest {
     public void invalidInputCriteriaMatrixMissingTest() throws IOException {
         //given
         String TMP_OUTPUT_PATH = folder.newFolder(output).getAbsolutePath();
-        String INPUT_PATH = "src/test/resources/data/failsExamples/" + input;
-        String EXPECTED_OUTPUT_PATH = "src/test/resources/data/failsExamples/" + output;
+        String INPUT_PATH = "src/test/resources/data/failsExamplesV3/" + input;
+        String EXPECTED_OUTPUT_PATH = "src/test/resources/data/failsExamplesV3/" + output;
         File EXPECTED_MESSAGES = new File(EXPECTED_OUTPUT_PATH + "/messages.xml");
 
         final String[] GIVEN_PARAMS = {"--input-directory", INPUT_PATH,
-                "--output-directory", TMP_OUTPUT_PATH};
+                "--output-directory", TMP_OUTPUT_PATH, VERSION};
 
         try {
             Application.main(GIVEN_PARAMS);
