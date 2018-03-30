@@ -46,16 +46,32 @@ java -jar ./target/hre-algorithm-1.0-jar-with-dependencies.jar -i ./test/inputV2
 
 More info about XMCDA format on [Decision Deck](https://www.decision-deck.org/project/)
 
-## procedure to build the HRE-AGH.zip
+## Building the HRE-AGH.zip
 
 run script build-zip.sh
 
 This script will generate HRE-AGH.zip with:
 
 tests directory
+
 description-wsDD.xml 
+
 HRE-AGH.1.0.jar
-
-
+```
+HRE-AGH/
+  +- description-wsDD.xml
+  +- HRE-AGH.1.0.jar
+  +- tests/
+     + launch.test1.sh
+     + launch.test2.sh
+     + launch.test3.sh
+     + launch.test4.sh
+     + launch.test5.sh
+     + in1/
+          ...
+     +- out1/
+          ...
+     ...
+```
 
 
