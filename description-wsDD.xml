@@ -16,7 +16,10 @@ For XMCDA input data version preferable is 3.0.0 but algorithm also support vers
             </documentation>
             <xmcda tag="alternatives">
                 <![CDATA[
-<alternatives> <alternative id="..."></alternative> [...] </alternatives>
+    <alternatives>
+        <alternative id="..."></alternative>
+        [...]
+    </alternatives>
 ]]>
             </xmcda>
         </input>
@@ -26,7 +29,15 @@ For XMCDA input data version preferable is 3.0.0 but algorithm also support vers
             </documentation>
             <xmcda tag="alternativesValues">
                 <![CDATA[
-<alternativesValues> <alternativeValue> <alternativeID> [...] </alternativeID> <values> <value> <real> [...] </real> </value>  </values> </alternativeValue> [...] </alternativesValues>
+    <alternativesValues>
+        <alternativeValue>
+            <alternativeID> [...] </alternativeID>
+            <values>
+                <value><real> [...] </real></value>
+            </values>
+        </alternativeValue>
+        [...]
+    </alternativesValues>
 ]]>
             </xmcda>
         </input>
@@ -36,7 +47,19 @@ For XMCDA input data version preferable is 3.0.0 but algorithm also support vers
             </documentation>
             <xmcda tag="alternativesValues">
                 <![CDATA[
-<alternativesMatrix> <row> <alternativeID> [...] </alternativeID> <column> <alternativeID> [...] </alternativeID> <values> <value> <real> [...] </real> </value> </values> </column> [...] </row> [...] </alternativesMatrix>
+    <alternativesMatrix>
+        <row>
+            <alternativeID>[...]</alternativeID>
+            <column>
+                <alternativeID>[...]</alternativeID>
+                <values>
+                    <value><real>[...]</real></value>
+                </values>
+            </column>
+            [...]
+        </row>
+        [...]
+    </alternativesMatrix>
 ]]>
             </xmcda>
         </input>
@@ -90,7 +113,7 @@ For XMCDA input data version preferable is 3.0.0 but algorithm also support vers
         </parameter>
     </programParameters>
 
-				]]>
+]]>
             </xmcda>
             <gui status="preferGUI">
                 <entry id="%1" type="boolean" displayName="TryToReciprocalMatrix">
@@ -151,7 +174,15 @@ For XMCDA input data version preferable is 3.0.0 but algorithm also support vers
             </documentation>
             <xmcda tag="alternativesValues">
                 <![CDATA[
-<alternativesValues> <alternativeValue> <alternativeID> [...] </alternativeID> <values> <value> <real> [...] </real> </value>  </values> </alternativeValue> [...] </alternativesValues>
+    <alternativesValues>
+        <alternativeValue>
+            <alternativeID> [...] </alternativeID>
+            <values>
+                <value><real> [...] </real></value>
+            </values>
+        </alternativeValue>
+        [...]
+    </alternativesValues>
 ]]>
             </xmcda>
         </output>
@@ -163,14 +194,14 @@ For XMCDA input data version preferable is 3.0.0 but algorithm also support vers
             </documentation>
             <xmcda tag="programExecutionResult">
                 <![CDATA[
-<programExecutionResult>
-		<status> [...] </status>
-		<messages>
-			<message level="...">
-				<text> [...] </text>
-			</message>
-		</messages>
-	</programExecutionResult>]]>
+    <programExecutionResult>
+        <status> [...] </status>
+        <messages>
+            <message level="...">
+                <text> [...] </text>
+            </message>
+        </messages>
+    </programExecutionResult>]]>
             </xmcda>
         </output>
     </parameters>
