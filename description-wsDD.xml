@@ -138,7 +138,7 @@ For XMCDA input data version preferable is 3.0.0 but algorithm also support vers
                             <value>MinimizingEstimationError</value>
                         </item>
                     </items>
-                    <defaultValue>Arithmetic</defaultValue>
+                    <defaultValue>item0</defaultValue>
                 </entry>
 
                 <entry id="%4" type="boolean" displayName="WithSmallestError">
