@@ -45,7 +45,7 @@ For XMCDA input data version preferable is 3.0.0 but algorithm also support vers
             <documentation>
                 <description>Partial assessments pairs over the set of alternatives.</description>
             </documentation>
-            <xmcda tag="alternativesValues">
+            <xmcda tag="alternativesMatrix">
                 <![CDATA[
     <alternativesMatrix>
         <row>
