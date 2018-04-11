@@ -168,7 +168,7 @@ For XMCDA input data version preferable is 3.0.0 but algorithm also support vers
             </gui>
         </input>
 
-        <output id="alternativesValues" name="alternativesValues" displayName="alternativesValues">
+        <output id="alternativesValues_out" name="alternativesValues" displayName="alternativesValues">
             <documentation>
                 <description>Calculated rankings for all alternatives.</description>
             </documentation>
