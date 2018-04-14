@@ -6,10 +6,14 @@
     <alternatives>
 
         <alternative id="a1">
+            <active>true</active>
         </alternative>
         <alternative id="a2">
         </alternative>
         <alternative id="a3">
+        </alternative>
+        <alternative id="a6">
+            <active>false</active>
         </alternative>
         <alternative id="a4">
         </alternative>

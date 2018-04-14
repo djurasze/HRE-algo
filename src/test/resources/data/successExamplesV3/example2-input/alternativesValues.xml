@@ -19,5 +19,13 @@
                 </value>
             </values>
         </alternativeValue>
+        <alternativeValue>
+            <alternativeID>a6</alternativeID>
+            <values>
+                <value>
+                    <real>2</real>
+                </value>
+            </values>
+        </alternativeValue>
     </alternativesValues>
 </xmcda:XMCDA>

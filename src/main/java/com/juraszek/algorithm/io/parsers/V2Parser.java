@@ -23,7 +23,7 @@ public class V2Parser implements Parser {
 
 
         org.xmcda.v2.XMCDA xmcda_v2 = new org.xmcda.v2.XMCDA();
-        loadXMCDA(xmcda_v2, new File(inputDirectory, "alternatives.xml"), true,
+        loadXMCDA(xmcda_v2, new File(inputDirectory, "alternatives.xml"), false,
                 executionResult, "alternatives");
         loadXMCDA(xmcda_v2, new File(inputDirectory, "alternativesMatrix.xml"), true,
                 executionResult, "alternativesMatrix");

@@ -7,7 +7,7 @@
     <programParameters>
 
 
-        <parameter name="NormalizeResults">
+        <parameter id="NormalizeResults">
             <values>
                 <value>
                     <boolean>true</boolean>

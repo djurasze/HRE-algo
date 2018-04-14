@@ -6,7 +6,7 @@
     <methodParameters>
 
 
-        <parameter name="NormalizeResults">
+        <parameter id="NormalizeResults">
                 <value>
                     <boolean>true</boolean>
                 </value>
