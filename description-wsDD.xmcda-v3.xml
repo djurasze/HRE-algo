@@ -73,33 +73,43 @@ For XMCDA input data version preferable is 3.0.0 but algorithm also support vers
 
     <methodParameters>
         <parameter name="TryToReciprocalMatrix">
-            <value>
-                <boolean>%1</boolean>
-            </value>
+            <values>
+                <value>
+                    <boolean>%1</boolean>
+                </value>
+            </values>
         </parameter>
 
         <parameter name="NormalizeResults">
-            <value>
-                <boolean>%2</boolean>
-            </value>
+            <values>
+                <value>
+                    <boolean>%2</boolean>
+                </value>
+            </values>
         </parameter>
 
         <parameter name="CalculationMethod">
-            <value>
-                <label>%3</label>
-            </value>
+            <values>
+                <value>
+                    <label>%3</label>
+                </value>
+            </values>
         </parameter>
 
         <parameter name="WithSmallestError">
-            <value>
-                <boolean>%4</boolean>
-            </value>
+            <values>
+                <value>
+                    <boolean>%4</boolean>
+                </value>
+            </values>
         </parameter>
 
          <parameter name="MaxIterations">
-            <value>
-                <integer>%5</integer>
-            </value>
+            <values>
+                <value>
+                    <integer>%5</integer>
+                </value>
+            </values>
         </parameter>
     </methodParameters>
 
