@@ -82,7 +82,7 @@ public class InputsHandler {
     private void extractParameters(XMCDA xmcda) {
         if (xmcda.programParametersList.size() > 0) {
             xmcda.programParametersList.get(0).forEach(programParameter ->
-                    xmcdaProperties.setParameter(Parameters.valueOf(programParameter.name()),
+                    xmcdaProperties.setParameter(Parameters.valueOf(programParameter.id()),
                             programParameter.getValues().get(0).getValue()));
         }
     }
@@ -125,7 +125,7 @@ public class InputsHandler {
         try {
             if (xmcda.programParametersList.size() > 0) {
                 xmcda.programParametersList.get(0)
-                        .forEach(programParameter -> Parameters.valueOf(programParameter.name()));
+                        .forEach(programParameter -> Parameters.valueOf(programParameter.id()));
             }
         } catch (IllegalArgumentException e) {
             final String msg = "Invalid parameter name found, reason:";

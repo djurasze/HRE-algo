@@ -3,7 +3,6 @@ package com.juraszek.algorithm.io;
 import com.juraszek.algorithm.models.HREModel;
 import com.juraszek.algorithm.utils.xmcda.CmdLineParser;
 import com.juraszek.algorithm.utils.xmcda.Version;
-import com.juraszek.algorithm.utils.xmcda.XMCDAMessageParser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.xmcda.ProgramExecutionResult;
@@ -37,7 +36,7 @@ public class IOService {
 
         xmcda = dataLoader.loadXMCDA(inputDirectory, executionResult);
 
-        if (!(executionResult.isOk() || executionResult.isWarning())) {
+       if (!(executionResult.isOk() || executionResult.isWarning())) {
             programExecutionResultsService.writeProgramExecutionResultsAndExit(prgExecResults, executionResult, "Invalid inputs.", params.xmcdaVersion);
         }
 

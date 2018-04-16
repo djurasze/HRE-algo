@@ -2,6 +2,7 @@ package com.juraszek.algorithm.io;
 
 import com.juraszek.algorithm.utils.xmcda.Version;
 import com.juraszek.algorithm.utils.xmcda.XMCDAMessageParser;
+import org.apache.commons.io.FileUtils;
 import org.springframework.stereotype.Service;
 import org.xmcda.Message;
 import org.xmcda.ProgramExecutionResult;
@@ -10,6 +11,7 @@ import org.xmcda.converters.v2_v3.XMCDAConverter;
 import org.xmcda.parsers.xml.xmcda_v2.XMCDAParser;
 
 import java.io.File;
+import java.io.IOException;
 
 @Service
 public class ProgramExecutionResultsService {
@@ -44,12 +46,23 @@ public class ProgramExecutionResultsService {
 
     public void writeProgramExecutionResultsAndExit(File prgExecResultsFile, ProgramExecutionResult errors, String message, Version version) throws Exception {
         try {
+            cleanOutputDirectory(prgExecResultsFile);
             writeProgramExecutionResults(prgExecResultsFile, errors, version);
         } catch (Throwable t) {
             System.err.println(XMCDAMessageParser.getMessage("Could not write messages.xml, reason: ", t));
             System.exit(ProgramExecutionResult.Status.ERROR.exitStatus());
         }
         throw new Exception(message);
+
+    }
+
+    private void cleanOutputDirectory(File prgExecResultsFile) {
+        try {
+            File parent = prgExecResultsFile.getParentFile();
+            FileUtils.cleanDirectory(parent);
+        } catch (IOException e) {
+            System.err.println(XMCDAMessageParser.getMessage("Could not remove all files from output directory, reason: ", e));
+        }
     }
 
 

@@ -10,9 +10,9 @@ For XMCDA input data version preferable is 3.0.0 but algorithm also support vers
         <contact>Dominik Juraszek (djurasze@gmail.com)</contact>
     </documentation>
     <parameters>
-        <input id="alternatives" name="alternatives" displayName="alternatives" isoptional="0">
+        <input id="alternatives" name="alternatives" displayName="alternatives" isoptional="1">
             <documentation>
-                <description>Alternatives that will be ranked. Alternatives must be active. By default (no active tag), alternatives are considered as active.</description>
+                <description>Alternatives that will be ranked. By default (no active tag), alternatives are considered as active. If absent, the program behave as if it was supplied with all alternatives being active</description>
             </documentation>
             <xmcda tag="alternatives">
                 <![CDATA[
@@ -72,7 +72,7 @@ For XMCDA input data version preferable is 3.0.0 but algorithm also support vers
                 <![CDATA[
 
     <methodParameters>
-        <parameter name="TryToReciprocalMatrix">
+        <parameter id="TryToReciprocalMatrix">
             <values>
                 <value>
                     <boolean>%1</boolean>
@@ -80,7 +80,7 @@ For XMCDA input data version preferable is 3.0.0 but algorithm also support vers
             </values>
         </parameter>
 
-        <parameter name="NormalizeResults">
+        <parameter id="NormalizeResults">
             <values>
                 <value>
                     <boolean>%2</boolean>
@@ -88,7 +88,7 @@ For XMCDA input data version preferable is 3.0.0 but algorithm also support vers
             </values>
         </parameter>
 
-        <parameter name="CalculationMethod">
+        <parameter id="CalculationMethod">
             <values>
                 <value>
                     <label>%3</label>
@@ -96,7 +96,7 @@ For XMCDA input data version preferable is 3.0.0 but algorithm also support vers
             </values>
         </parameter>
 
-        <parameter name="WithSmallestError">
+        <parameter id="WithSmallestError">
             <values>
                 <value>
                     <boolean>%4</boolean>
@@ -104,7 +104,7 @@ For XMCDA input data version preferable is 3.0.0 but algorithm also support vers
             </values>
         </parameter>
 
-         <parameter name="MaxIterations">
+         <parameter id="MaxIterations">
             <values>
                 <value>
                     <integer>%5</integer>

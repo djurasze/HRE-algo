@@ -52,6 +52,7 @@ public class ApplicationFailV2Test {
         String INPUT_PATH = "src/test/resources/data/failsExamplesV2/" + input;
         String EXPECTED_OUTPUT_PATH = "src/test/resources/data/failsExamplesV2/" + output;
         File EXPECTED_MESSAGES = new File(EXPECTED_OUTPUT_PATH + "/messages.xml");
+        File NOT_EXPECTED_FILE = new File(EXPECTED_OUTPUT_PATH + "/alternativesValues.xml");
 
         final String[] GIVEN_PARAMS = {"--input-directory", INPUT_PATH,
                 "--output-directory", TMP_OUTPUT_PATH, VERSION};
@@ -67,6 +68,7 @@ public class ApplicationFailV2Test {
         File messages = new File(TMP_OUTPUT_PATH + "/messages.xml");
 
         assertThat(FileUtils.contentEqualsIgnoreEOL(messages, EXPECTED_MESSAGES, "utf-8")).isTrue();
+        assertThat(NOT_EXPECTED_FILE.exists()).isFalse();
     }
 
 }

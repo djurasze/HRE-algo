@@ -5,7 +5,7 @@
         xsi:schemaLocation="http://www.decision-deck.org/2013/XMCDA-3.0.0 http://www.decision-deck.org/xmcda/_downloads/XMCDA-3.0.0.xsd">
 
     <programParameters>
-        <parameter name="TryToReciprocalMatrix">
+        <parameter id="TryToReciprocalMatrix">
             <values>
                 <value>
                     <boolean>false</boolean>
@@ -14,7 +14,7 @@
         </parameter>
 
 
-        <parameter name="NormalizeResults">
+        <parameter id="NormalizeResults">
             <values>
                 <value>
                     <boolean>true</boolean>
@@ -22,7 +22,7 @@
             </values>
         </parameter>
 
-        <parameter name="CalculationMethod">
+        <parameter id="CalculationMethod">
             <values>
                 <value>
                     <label>Arithmetic</label>

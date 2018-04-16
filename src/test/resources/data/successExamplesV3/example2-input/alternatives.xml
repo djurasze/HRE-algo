@@ -6,7 +6,7 @@
 
     <alternatives>
 
-        <alternative id="a1">
+        <alternative id="a1" >
         </alternative>
         <alternative id="a2">
         </alternative>
@@ -15,6 +15,9 @@
         <alternative id="a4">
         </alternative>
         <alternative id="a5">
+        </alternative>
+        <alternative id="a6">
+            <active>false</active>
         </alternative>
     </alternatives>
 
