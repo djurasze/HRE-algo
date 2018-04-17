@@ -23,7 +23,7 @@ For XMCDA input data version preferable is 3.0.0 but algorithm also support vers
 ]]>
             </xmcda>
         </input>
-        <input id="alternativesValues" name="alternativesValues" displayName="alternativesValues" isoptional="1">
+        <input id="alternativesValues" name="knownRankings" displayName="known rankings" isoptional="1">
             <documentation>
                 <description>Initially known rankings for alternatives.</description>
             </documentation>

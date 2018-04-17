@@ -19,7 +19,7 @@ public class V3Parser implements Parser {
                 executionResult, "alternatives");
         loadXMCDA(xmcda, new File(inputDirectory, "alternativesMatrix.xml"), true,
                 executionResult, "alternativesMatrix");
-        loadXMCDA(xmcda, new File(inputDirectory, "alternativesValues.xml"), false,
+        loadXMCDA(xmcda, new File(inputDirectory, "knownRankings.xml"), false,
                 executionResult, "alternativesValues");
         loadXMCDA(xmcda, new File(inputDirectory, "parameters.xml"), true,
                 executionResult, "programParameters");
