@@ -182,16 +182,14 @@ For XMCDA input data version preferable is 3.0.0 but algorithm also support vers
             <documentation>
                 <description>Log message about program status. This can be 'ok' when algorithm finish successfully or 'error' when something goes wrong.</description>
             </documentation>
-            <xmcda tag="programExecutionResult">
+            <xmcda tag="methodMessages">
                 <![CDATA[
-    <programExecutionResult>
-        <status> [...] </status>
-        <messages>
-            <message level="...">
-                <text> [...] </text>
-            </message>
-        </messages>
-    </programExecutionResult>]]>
+    <methodMessages>
+        <message>
+            <text> [...] </text>
+        </message>
+    </methodMessages>
+]]>
             </xmcda>
         </output>
     </parameters>
