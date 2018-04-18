@@ -29,7 +29,7 @@ public class ApplicationSuccessV3Test {
                 { "example2-input","example2-output"}, // with reference concept values, arithmetic
                 { "example3-input","example3-output"}, // not reciprocal matrix, arithmetic
                 { "example4-input","example4-output"},  // incomplete matrix, arithmetic
-                { "example5-input","example5-output"},  // scienctific entities assessment, geometric
+                { "example5-input","example5-output"},  // scientific entities assessment, geometric
                 { "example6-input","example6-output"}, // tv shows, geometric
                 { "example-inconsistency1-input","example-inconsistency1-output"}, // arithmetic
                 { "example-inconsistency2-input","example-inconsistency2-output"}, // MinimizingEstimationError
@@ -64,10 +64,10 @@ public class ApplicationSuccessV3Test {
         Application.main(GIVEN_PARAMS);
 
         //then
-        File criteriaValues = new File(TMP_OUTPUT_PATH + "/alternativesValues.xml");
+        File alternativesValues = new File(TMP_OUTPUT_PATH + "/alternativesValues.xml");
         File messages = new File(TMP_OUTPUT_PATH + "/messages.xml");
 
-        assertThat(FileUtils.contentEqualsIgnoreEOL(criteriaValues, EXPECTED_ALTERNATIVES_VALUES, "utf-8")).isTrue();
+        assertThat(FileUtils.contentEqualsIgnoreEOL(alternativesValues, EXPECTED_ALTERNATIVES_VALUES, "utf-8")).isTrue();
         assertThat(FileUtils.contentEqualsIgnoreEOL(messages, EXPECTED_MESSAGES, "utf-8")).isTrue();
 
     }

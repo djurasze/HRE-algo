@@ -12,7 +12,7 @@ For XMCDA input data version preferable is 3.0.0 but algorithm also support vers
     <parameters>
         <input id="alternatives" name="alternatives" displayName="alternatives" isoptional="1">
             <documentation>
-                <description>Alternatives that will be ranked. By default (no active tag), alternatives are considered as active. If absent, the program behave as if it was supplied with all alternatives being active</description>
+                <description>Alternatives that will be ranked. By default (no active tag), alternatives are considered as active. If absent, the program behaves as if it was supplied with all alternatives being active</description>
             </documentation>
             <xmcda tag="alternatives">
                 <![CDATA[
