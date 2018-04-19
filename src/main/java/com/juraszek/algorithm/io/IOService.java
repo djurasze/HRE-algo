@@ -86,6 +86,8 @@ public class IOService {
                             ProgramExecutionResult executionResult, File prgExecResults) throws Throwable {
         Map<String, XMCDA> results = outputsHandler.convert(model);
 
+        /* XMCDA v2 programs prefer not to embed value in a <values> tag */
+        XMCDAConverter.omit_values_in_alternativesValues = true;
 
         for (String key : results.keySet()) {
             org.xmcda.v2.XMCDA results_v2;

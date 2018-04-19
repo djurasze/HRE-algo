@@ -3,67 +3,51 @@
     <alternativesValues>
         <alternativeValue>
             <alternativeID>a1</alternativeID>
-            <values>
-                <value>
-                    <real>0.093</real>
-                </value>
-            </values>
+            <value>
+                <real>0.093</real>
+            </value>
         </alternativeValue>
         <alternativeValue>
             <alternativeID>a2</alternativeID>
-            <values>
-                <value>
-                    <real>0.121</real>
-                </value>
-            </values>
+            <value>
+                <real>0.121</real>
+            </value>
         </alternativeValue>
         <alternativeValue>
             <alternativeID>a3</alternativeID>
-            <values>
-                <value>
-                    <real>0.096</real>
-                </value>
-            </values>
+            <value>
+                <real>0.096</real>
+            </value>
         </alternativeValue>
         <alternativeValue>
             <alternativeID>a4</alternativeID>
-            <values>
-                <value>
-                    <real>0.124</real>
-                </value>
-            </values>
+            <value>
+                <real>0.124</real>
+            </value>
         </alternativeValue>
         <alternativeValue>
             <alternativeID>a5</alternativeID>
-            <values>
-                <value>
-                    <real>0.173</real>
-                </value>
-            </values>
+            <value>
+                <real>0.173</real>
+            </value>
         </alternativeValue>
         <alternativeValue>
             <alternativeID>a6</alternativeID>
-            <values>
-                <value>
-                    <real>0.144</real>
-                </value>
-            </values>
+            <value>
+                <real>0.144</real>
+            </value>
         </alternativeValue>
         <alternativeValue>
             <alternativeID>a7</alternativeID>
-            <values>
-                <value>
-                    <real>0.118</real>
-                </value>
-            </values>
+            <value>
+                <real>0.118</real>
+            </value>
         </alternativeValue>
         <alternativeValue>
             <alternativeID>a8</alternativeID>
-            <values>
-                <value>
-                    <real>0.13</real>
-                </value>
-            </values>
+            <value>
+                <real>0.13</real>
+            </value>
         </alternativeValue>
     </alternativesValues>
 </xmcda:XMCDA>

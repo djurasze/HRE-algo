@@ -3,35 +3,27 @@
     <alternativesValues>
         <alternativeValue>
             <alternativeID>a1</alternativeID>
-            <values>
-                <value>
-                    <real>0.369</real>
-                </value>
-            </values>
+            <value>
+                <real>0.369</real>
+            </value>
         </alternativeValue>
         <alternativeValue>
             <alternativeID>a2</alternativeID>
-            <values>
-                <value>
-                    <real>0.338</real>
-                </value>
-            </values>
+            <value>
+                <real>0.338</real>
+            </value>
         </alternativeValue>
         <alternativeValue>
             <alternativeID>a3</alternativeID>
-            <values>
-                <value>
-                    <real>0.154</real>
-                </value>
-            </values>
+            <value>
+                <real>0.154</real>
+            </value>
         </alternativeValue>
         <alternativeValue>
             <alternativeID>a4</alternativeID>
-            <values>
-                <value>
-                    <real>0.138</real>
-                </value>
-            </values>
+            <value>
+                <real>0.138</real>
+            </value>
         </alternativeValue>
     </alternativesValues>
 </xmcda:XMCDA>
