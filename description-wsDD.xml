@@ -106,7 +106,7 @@ For XMCDA input data version preferable is 3.0.0 but algorithm also support vers
 ]]>
             </xmcda>
             <gui status="preferGUI">
-                <entry id="%1" type="boolean" displayName="Try to reciprocal matrix?">
+                <entry id="%1" type="boolean" displayName="Try reciprocity restoration procedure for pairwise comparisons matrix?">
                     <documentation>
                         <description>Turns on Heuristics of reciprocity restoration. This is a boolean. The default value is false.</description>
                     </documentation>
@@ -141,7 +141,7 @@ For XMCDA input data version preferable is 3.0.0 but algorithm also support vers
                     <defaultValue>item0</defaultValue>
                 </entry>
 
-                <entry id="%4" type="boolean" displayName="With smallest error">
+                <entry id="%4" type="boolean" displayName="Try minimal absolute estimation error?">
                     <documentation>
                         <description>Tries to find solution with smallest error. This method should be used with 'Arithmetic' calculation method and with specified MaxIterations. In practice, it should be small enough (even two or three iterations may be useful). This is a boolean. The default value is false.</description>
                     </documentation>
@@ -152,6 +152,12 @@ For XMCDA input data version preferable is 3.0.0 but algorithm also support vers
                     <documentation>
                         <description>Defines number of maximum iterations for algorithm. This is a integer. The default value is 100.</description>
                     </documentation>
+                    <constraint>
+                        <description>Iterations should be positive</description>
+                        <code>
+                            <![CDATA[ %1 > 0 ]]>
+                        </code>
+                    </constraint>
                     <defaultValue>100</defaultValue>
                 </entry>
 
