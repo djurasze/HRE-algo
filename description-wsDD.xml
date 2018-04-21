@@ -12,7 +12,7 @@ For XMCDA input data version preferable is 3.0.0 but algorithm also support vers
     <parameters>
         <input id="alternatives" name="alternatives" displayName="alternatives" isoptional="1">
             <documentation>
-                <description>Alternatives that will be ranked. By default (no active tag), alternatives are considered as active. If absent, the program behave as if it was supplied with all alternatives being active</description>
+                <description>Alternatives that will be ranked. By default (no active tag), alternatives are considered as active. If absent, the program behaves as if it was supplied with all alternatives being active</description>
             </documentation>
             <xmcda tag="alternatives">
                 <![CDATA[
@@ -23,7 +23,7 @@ For XMCDA input data version preferable is 3.0.0 but algorithm also support vers
 ]]>
             </xmcda>
         </input>
-        <input id="alternativesValues" name="alternativesValues" displayName="alternativesValues" isoptional="1">
+        <input id="alternativesValues" name="knownRankings" displayName="known rankings" isoptional="1">
             <documentation>
                 <description>Initially known rankings for alternatives.</description>
             </documentation>
@@ -41,7 +41,7 @@ For XMCDA input data version preferable is 3.0.0 but algorithm also support vers
 ]]>
             </xmcda>
         </input>
-        <input id="alternativesMatrix" name="alternativesMatrix" displayName="alternativesMatrix" isoptional="0">
+        <input id="alternativesMatrix" name="alternativesMatrix" displayName="pairwise comparisons matrix" isoptional="0">
             <documentation>
                 <description>Partial assessments pairs over the set of alternatives.</description>
             </documentation>
@@ -106,21 +106,21 @@ For XMCDA input data version preferable is 3.0.0 but algorithm also support vers
 ]]>
             </xmcda>
             <gui status="preferGUI">
-                <entry id="%1" type="boolean" displayName="TryToReciprocalMatrix">
+                <entry id="%1" type="boolean" displayName="Try to reciprocal matrix?">
                     <documentation>
                         <description>Turns on Heuristics of reciprocity restoration. This is a boolean. The default value is false.</description>
                     </documentation>
                     <defaultValue>false</defaultValue>
                 </entry>
 
-                <entry id="%2" type="boolean" displayName="NormalizeResults">
+                <entry id="%2" type="boolean" displayName="Normalize results?">
                     <documentation>
                         <description>Turns on results normalization. This is a boolean. The default value is true.</description>
                     </documentation>
                     <defaultValue>true</defaultValue>
                 </entry>
 
-                <entry id="%3" type="enum" displayName="CalculationMethod">
+                <entry id="%3" type="enum" displayName="Calculation method">
                     <documentation>
                         <description>This parameter specifies the type of calculation method.</description>
                     </documentation>
@@ -141,14 +141,14 @@ For XMCDA input data version preferable is 3.0.0 but algorithm also support vers
                     <defaultValue>item0</defaultValue>
                 </entry>
 
-                <entry id="%4" type="boolean" displayName="WithSmallestError">
+                <entry id="%4" type="boolean" displayName="With smallest error">
                     <documentation>
                         <description>Tries to find solution with smallest error. This method should be used with 'Arithmetic' calculation method and with specified MaxIterations. In practice, it should be small enough (even two or three iterations may be useful). This is a boolean. The default value is false.</description>
                     </documentation>
                     <defaultValue>false</defaultValue>
                 </entry>
 
-                <entry id="%5" type="int" displayName="MaxIterations">
+                <entry id="%5" type="int" displayName="Maximum iterations">
                     <documentation>
                         <description>Defines number of maximum iterations for algorithm. This is a integer. The default value is 100.</description>
                     </documentation>
@@ -158,7 +158,7 @@ For XMCDA input data version preferable is 3.0.0 but algorithm also support vers
             </gui>
         </input>
 
-        <output id="alternativesValues_out" name="alternativesValues" displayName="alternativesValues">
+        <output id="alternativesValues_out" name="alternativesValues" displayName="computed rankings">
             <documentation>
                 <description>Calculated rankings for all alternatives.</description>
             </documentation>
@@ -182,16 +182,14 @@ For XMCDA input data version preferable is 3.0.0 but algorithm also support vers
             <documentation>
                 <description>Log message about program status. This can be 'ok' when algorithm finish successfully or 'error' when something goes wrong.</description>
             </documentation>
-            <xmcda tag="programExecutionResult">
+            <xmcda tag="methodMessages">
                 <![CDATA[
-    <programExecutionResult>
-        <status> [...] </status>
-        <messages>
-            <message level="...">
-                <text> [...] </text>
-            </message>
-        </messages>
-    </programExecutionResult>]]>
+    <methodMessages>
+        <message>
+            <text> [...] </text>
+        </message>
+    </methodMessages>
+]]>
             </xmcda>
         </output>
     </parameters>
