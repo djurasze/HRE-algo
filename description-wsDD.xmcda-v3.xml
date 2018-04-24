@@ -156,6 +156,7 @@ For XMCDA input data version preferable is 3.0.0 but algorithm also support vers
                         <description>Tries to find solution with smallest error. This method should be used with 'Arithmetic' calculation method and with specified MaxIterations. In practice, it should be small enough (even two or three iterations may be useful). This is a boolean. The default value is false.</description>
                     </documentation>
                     <defaultValue>false</defaultValue>
+                    <dependency><![CDATA[%3:type="item0"]]></dependency>
                 </entry>
 
                 <entry id="%5" type="int" displayName="Maximum iterations">
