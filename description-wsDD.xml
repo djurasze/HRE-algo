@@ -1,8 +1,8 @@
 <program_description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                      xsi:noNamespaceSchemaLocation="https://www.decision-deck.org/ws/_downloads/description.xsd">
-    <program provider="AGH" name="HRE" displayName="HeuristicRatingEstimation" version="1.0"/>
+    <program provider="AGH" name="PairwiseComparisons-HeuristicRatingEstimation" displayName="PairwiseComparisons-HeuristicRatingEstimation" version="1.0"/>
     <documentation>
-        <description>Computes HRE(Heuristic rating estimation) method - approach proposes a new way of using pairwise comparisons matrix.
+        <description>Computes HRE (Heuristic rating estimation) method - approach proposes a new way of using pairwise comparisons matrix.
 Source code: https://github.com/djurasze/HRE-algo.
 More info about algorithm: https://link.springer.com/article/10.1007/s10898-014-0253-4 and https://arxiv.org/pdf/1309.0386.pdf
 For XMCDA input data version preferable is 3.0.0 but algorithm also support version 2.2.2
@@ -146,6 +146,7 @@ For XMCDA input data version preferable is 3.0.0 but algorithm also support vers
                         <description>Tries to find solution with smallest error. This method should be used with 'Arithmetic' calculation method and with specified MaxIterations. In practice, it should be small enough (even two or three iterations may be useful). This is a boolean. The default value is false.</description>
                     </documentation>
                     <defaultValue>false</defaultValue>
+                    <dependency><![CDATA[%3:type="item0"]]></dependency>
                 </entry>
 
                 <entry id="%5" type="int" displayName="Maximum iterations">
